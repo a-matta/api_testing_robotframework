@@ -40,12 +40,7 @@ def post_request():
     return json_str
 
 
-import json
-
 # PUT Request
-import requests
-
-
 def put_request(user_id: int = 1):
     url = f"{baseurl}/posts/{user_id}"
     print("PUT request")
@@ -70,8 +65,6 @@ def put_request(user_id: int = 1):
 
 
 # PATCH Request
-
-
 def patch_request():
     url = f"{baseurl}/posts/1"
     print("PATCH request")
@@ -85,9 +78,8 @@ def patch_request():
     json_str = json.dumps(json_data, indent=4)
     print(json_str)
 
-    # DELETE Request
 
-
+# DELETE Request
 def delete_request(user_id: int):
     url = f"{baseurl}/posts/{user_id}"
     print("DELETE request")
