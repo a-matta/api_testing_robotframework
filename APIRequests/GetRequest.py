@@ -73,7 +73,7 @@ def put_request(user_id: int = 1):
 
 
 def patch_request():
-    url = baseurl + "/posts/1"
+    url = f"{baseurl}/posts/1"
     print("PATCH request")
     data = {"title": "Updated title with PATCH"}
     response = requests.patch(url, json=data)
@@ -85,8 +85,20 @@ def patch_request():
     json_str = json.dumps(json_data, indent=4)
     print(json_str)
 
+    # DELETE Request
+
+
+def delete_request(user_id: int):
+    url = f"{baseurl}/posts/{user_id}"
+    print("DELETE request")
+    response = requests.delete(url)
+    if response.status_code != 200:
+        raise ValueError(f"Unexpected status: {response.status_code}")
+    return response
+
 
 get_request()
 post_request()
 put_request(1)
 patch_request()
+delete_request(1)
