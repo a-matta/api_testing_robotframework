@@ -17,6 +17,7 @@ robotframework-tidy = "^4.18.0"
 robotframework-seleniumlibrary = "^6.7.1"
 robotframework-jsonlibrary = "^0.5"
 robotframework-requests = "^0.9.7"
+flask = "^3.1.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.10.0"
